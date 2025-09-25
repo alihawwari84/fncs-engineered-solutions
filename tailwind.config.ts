@@ -47,6 +47,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Engineering specific colors
+        "engineering-red": {
+          DEFAULT: "hsl(var(--engineering-red))",
+          dark: "hsl(var(--engineering-red-dark))",
+          light: "hsl(var(--engineering-red-light))",
+        },
+        "surface": {
+          dark: "hsl(var(--surface-dark))",
+          darker: "hsl(var(--surface-darker))",
+          light: "hsl(var(--surface-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
