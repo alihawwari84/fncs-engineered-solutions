@@ -100,7 +100,7 @@ const ServicesSlider = () => {
       } else {
         api.scrollTo(0);
       }
-    }, 4000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, [api, isHovered]);
