@@ -1,6 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Building, Target, Eye, Users, Calendar, MapPin } from "lucide-react";
+import { Building, Target, Eye, Users, Calendar, MapPin, Award } from "lucide-react";
+import engineeringOfficeImage from "@/assets/engineering-office.jpg";
 
 const About = () => {
   return (
@@ -8,16 +9,41 @@ const About = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-surface-dark to-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 pb-16 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
+            src={engineeringOfficeImage}
+            alt="FNCS Engineering Office"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/90" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/60" />
+        </div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center animate-slide-up">
             <h1 className="text-5xl font-bold text-foreground mb-6">
               About <span className="text-gradient">FNCS</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Engineering Excellence Since 2018. We are a leading engineering consultancy 
-              firm dedicated to delivering innovative solutions with cutting-edge technology.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+              Engineering Consultancy Services committed to excellence, innovation, 
+              and delivering world-class engineering solutions since 2018.
             </p>
+            <div className="flex flex-wrap justify-center gap-6">
+              <div className="flex items-center space-x-2 text-foreground">
+                <Calendar className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Established 2018</span>
+              </div>
+              <div className="flex items-center space-x-2 text-foreground">
+                <Users className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Expert Team</span>
+              </div>
+              <div className="flex items-center space-x-2 text-foreground">
+                <Award className="h-5 w-5 text-primary" />
+                <span className="text-sm font-medium">Award-Winning</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -35,10 +61,15 @@ const About = () => {
                 to provide world-class engineering solutions. Located in the heart of Amman, 
                 Jordan, we have grown to become a trusted partner for clients across various sectors.
               </p>
-              <p className="text-lg text-muted-foreground mb-8">
+              <p className="text-lg text-muted-foreground mb-6">
                 Our team of experienced engineers and consultants brings together decades 
                 of expertise in mechanical, electrical, and sustainable engineering practices. 
                 We pride ourselves on our commitment to innovation, quality, and client satisfaction.
+              </p>
+              <p className="text-lg text-muted-foreground mb-8">
+                From complex commercial developments to specialized industrial facilities, 
+                FNCS has established itself as a leader in engineering consultancy services 
+                throughout Jordan and the region.
               </p>
               
               <div className="grid grid-cols-2 gap-6">

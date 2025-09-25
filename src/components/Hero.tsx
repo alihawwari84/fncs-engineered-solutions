@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-engineering.jpg";
+import heroImage from "@/assets/hero-engineering-main.jpg";
 
 const Hero = () => {
   const highlights = [
     "150+ Successful Projects",
-    "Engineering Excellence",
+    "Engineering Excellence", 
     "Innovative Solutions"
   ];
 
@@ -19,16 +19,16 @@ const Hero = () => {
           alt="Engineering Excellence"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-background/90" />
+        <div className="absolute inset-0 bg-background/85" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-transparent to-background/40" />
       </div>
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="animate-slide-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 text-foreground">
-            WE WORK FOR YOUR{" "}
-            <span className="text-gradient">SUCCESS</span>{" "}
-            IN REAL
+            Engineering Excellence.{" "}
+            <span className="text-gradient">Built for Your Success.</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
