@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import fncsLogo from "@/assets/fncs-logo.jpg";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,9 +33,16 @@ const Navigation = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="text-2xl font-bold text-foreground hover:text-primary transition-colors"
+            className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
           >
-            <span className="text-gradient">FNCS</span>
+            <img 
+              src={fncsLogo} 
+              alt="FNCS - First National Consulting Services" 
+              className="h-10 w-auto"
+            />
+            <span className="text-xl font-bold text-foreground hidden sm:block">
+              First National Consulting Services
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
