@@ -1,5 +1,6 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ServicesSlider from "@/components/ServicesSlider";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -156,9 +157,21 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Services Slider */}
+      <ServicesSlider />
+
+      {/* Detailed Services Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Detailed <span className="text-gradient">Service Overview</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Explore our comprehensive range of engineering services with detailed features and capabilities.
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <div
