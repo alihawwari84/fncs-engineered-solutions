@@ -13,6 +13,7 @@ import {
   FileText,
   Calculator
 } from "lucide-react";
+import mechanicalIcon from "@/assets/mechanical.png";
 
 const ServicesOverview = () => {
   const services = [
@@ -79,7 +80,11 @@ const ServicesOverview = () => {
             >
               <div className="flex justify-center mb-4">
                 <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                  <service.icon className="h-6 w-6 text-primary" />
+                  {service.title === "Mechanical Engineering" ? (
+                    <img src={mechanicalIcon} alt="Mechanical Engineering" className="h-6 w-6" />
+                  ) : (
+                    <service.icon className="h-6 w-6 text-primary" />
+                  )}
                 </div>
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-3 text-center">
